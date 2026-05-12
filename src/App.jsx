@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
 import Prodotti from './pages/Prodotti'
 import ChiSiamo from './pages/ChiSiamo'
+import MainLayout from './layout/mainLayout'
 
 
 function App() {
@@ -13,10 +14,12 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
+      <Route element={<MainLayout/>}>
       <Route index element={<HomePage/>}/>
       <Route path='prodotti' element={<Prodotti/>}/>
       <Route path='chi_siamo' element={<ChiSiamo/>}/>
       <Route path='*' element={<NotFound/>}/>
+      </Route>
     </Routes>
     </BrowserRouter>
     </>
