@@ -1,6 +1,12 @@
-*{
- margin: 0;
- border: 0;
- padding: 0;
- box-sizing: border-box; 
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-active {
+    color: #0062d1 !important;
+    text-decoration: underline;
+    transition: all 0.3s ease;
 }
