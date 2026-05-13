@@ -3,7 +3,7 @@
 
 function NotFound() {
   return (
-    <div>Pagina non trovata</div>
+    <h1>Pagina non trovata</h1>
   )
 }
 export default NotFound

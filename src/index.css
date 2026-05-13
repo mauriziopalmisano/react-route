@@ -6,7 +6,17 @@
 }
 
 .my-active {
-    color: #0062d1 !important;
+    color: #1fb3ee !important;
     text-decoration: underline;
     transition: all 0.3s ease;
+}
+
+.img-card{
+    width: 200px;
+    aspect-ratio: 1;
+}
+
+.img-navbar{
+    height: 50px;
+    
 }

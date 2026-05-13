@@ -9,6 +9,10 @@ function useFetch(urlAPI) {
     const mountedStatus = useRef(true);
 
     useEffect(() => {
+        if (!urlAPI) { //per assicurarsi che la fetch venga fatta solo quando l'URL é pronto
+            setLoadingStatus(false); // per evitare che rimanga bloccato sulla loading
+            return;
+        }
         mountedStatus.current = true;
         const controller = new AbortController(); //permette di annullare richieste in corso.
         setLoadingStatus(true);
@@ -38,10 +42,8 @@ function useFetch(urlAPI) {
             mountedStatus.current = false;
             controller.abort();
         };
-
-
     }, [urlAPI]);
 
-    return {fetchedData, loadingStatus, error};
+    return { fetchedData, loadingStatus, error };
 }
 export default useFetch;
