@@ -15,6 +15,7 @@ function useFetch(urlAPI) {
         }
         mountedStatus.current = true;
         const controller = new AbortController(); //permette di annullare richieste in corso.
+        setFetechedData(null);
         setLoadingStatus(true);
         setError(null);
 
