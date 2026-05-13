@@ -12,7 +12,7 @@ function Prodotti() {
           const { id, title, category, price, image } = prodotto;
           return (
             <div className='col-4' key={id}>
-              <div className="card align-items-center py-3 mb-3 justify-content-center">
+              <div className="card align-items-center py-3 mb-3 justify-content-center text-center">
                 <img src={image} className="card-img-top img-card" alt={title} />
                 <div className="card-body">
                   <h5 className="card-title">{title}</h5>
